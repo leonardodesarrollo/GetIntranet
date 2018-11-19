@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AegisImplicitMail">
+      <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\AegisImplicitMail.dll</HintPath>
+    </Reference>
     <Reference Include="AjaxControlToolkit, Version=18.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <HintPath>..\packages\AjaxControlToolkit.18.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
     </Reference>
@@ -53,12 +56,65 @@
     <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\itextsharp.xtra.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
+      <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -89,6 +145,361 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AgendaUsuarios.aspx" />
+    <Content Include="Assets\charts.html" />
+    <Content Include="Assets\css\base-admin-responsive.css" />
+    <Content Include="Assets\css\bootstrap-responsive.min.css" />
+    <Content Include="Assets\css\bootstrap.css" />
+    <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\css\font-awesome-ie7.css" />
+    <Content Include="Assets\css\font-awesome-ie7.min.css" />
+    <Content Include="Assets\css\font-awesome.css" />
+    <Content Include="Assets\css\font-awesome.min.css" />
+    <Content Include="Assets\css\pages\dashboard.css" />
+    <Content Include="Assets\css\pages\faq.css" />
+    <Content Include="Assets\css\pages\plans.css" />
+    <Content Include="Assets\css\pages\reports.css" />
+    <Content Include="Assets\css\pages\signin.css" />
+    <Content Include="Assets\css\style.css" />
+    <Content Include="Assets\datatables\2\dataTables.bootstrap.css" />
+    <Content Include="Assets\datatables\2\dataTables.bootstrap.js" />
+    <Content Include="Assets\datatables\2\dataTables.bootstrap.min.js" />
+    <Content Include="Assets\datatables\2\index.html" />
+    <Content Include="Assets\datatables\dataTables.bootstrap.css" />
+    <Content Include="Assets\datatables\dataTables.bootstrap.js" />
+    <Content Include="Assets\datatables\dataTables.bootstrap.min.js" />
+    <Content Include="Assets\datatables\extensions\AutoFill\css\dataTables.autoFill.css" />
+    <Content Include="Assets\datatables\extensions\AutoFill\css\dataTables.autoFill.min.css" />
+    <Content Include="Assets\datatables\extensions\AutoFill\examples\columns.html" />
+    <Content Include="Assets\datatables\extensions\AutoFill\examples\complete-callback.html" />
+    <Content Include="Assets\datatables\extensions\AutoFill\examples\fill-both.html" />
+    <Content Include="Assets\datatables\extensions\AutoFill\examples\fill-horizontal.html" />
+    <Content Include="Assets\datatables\extensions\AutoFill\examples\index.html" />
+    <Content Include="Assets\datatables\extensions\AutoFill\examples\scrolling.html" />
+    <Content Include="Assets\datatables\extensions\AutoFill\examples\simple.html" />
+    <Content Include="Assets\datatables\extensions\AutoFill\examples\step-callback.html" />
+    <Content Include="Assets\datatables\extensions\AutoFill\images\filler.png" />
+    <Content Include="Assets\datatables\extensions\AutoFill\js\dataTables.autoFill.js" />
+    <Content Include="Assets\datatables\extensions\AutoFill\js\dataTables.autoFill.min.js" />
+    <Content Include="Assets\datatables\extensions\AutoFill\Readme.txt" />
+    <Content Include="Assets\datatables\extensions\bootstrap-select\bootstrap-select.css" />
+    <Content Include="Assets\datatables\extensions\bootstrap-select\bootstrap-select.js" />
+    <Content Include="Assets\datatables\extensions\bootstrap-select\bootstrap-select.min.css" />
+    <Content Include="Assets\datatables\extensions\bootstrap-select\bootstrap-select.min.js" />
+    <Content Include="Assets\datatables\extensions\ColReorder\css\dataTables.colReorder.css" />
+    <Content Include="Assets\datatables\extensions\ColReorder\css\dataTables.colReorder.min.css" />
+    <Content Include="Assets\datatables\extensions\ColReorder\examples\alt_insert.html" />
+    <Content Include="Assets\datatables\extensions\ColReorder\examples\colvis.html" />
+    <Content Include="Assets\datatables\extensions\ColReorder\examples\col_filter.html" />
+    <Content Include="Assets\datatables\extensions\ColReorder\examples\fixedcolumns.html" />
+    <Content Include="Assets\datatables\extensions\ColReorder\examples\fixedheader.html" />
+    <Content Include="Assets\datatables\extensions\ColReorder\examples\index.html" />
+    <Content Include="Assets\datatables\extensions\ColReorder\examples\jqueryui.html" />
+    <Content Include="Assets\datatables\extensions\ColReorder\examples\new_init.html" />
+    <Content Include="Assets\datatables\extensions\ColReorder\examples\predefined.html" />
+    <Content Include="Assets\datatables\extensions\ColReorder\examples\realtime.html" />
+    <Content Include="Assets\datatables\extensions\ColReorder\examples\reset.html" />
+    <Content Include="Assets\datatables\extensions\ColReorder\examples\scrolling.html" />
+    <Content Include="Assets\datatables\extensions\ColReorder\examples\server_side.html" />
+    <Content Include="Assets\datatables\extensions\ColReorder\examples\simple.html" />
+    <Content Include="Assets\datatables\extensions\ColReorder\examples\state_save.html" />
+    <Content Include="Assets\datatables\extensions\ColReorder\images\insert.png" />
+    <Content Include="Assets\datatables\extensions\ColReorder\js\dataTables.colReorder.js" />
+    <Content Include="Assets\datatables\extensions\ColReorder\js\dataTables.colReorder.min.js" />
+    <Content Include="Assets\datatables\extensions\ColReorder\License.txt" />
+    <Content Include="Assets\datatables\extensions\ColVis\css\dataTables.colVis.css" />
+    <Content Include="Assets\datatables\extensions\ColVis\css\dataTables.colvis.jqueryui.css" />
+    <Content Include="Assets\datatables\extensions\ColVis\css\dataTables.colVis.min.css" />
+    <Content Include="Assets\datatables\extensions\ColVis\examples\button_order.html" />
+    <Content Include="Assets\datatables\extensions\ColVis\examples\exclude_columns.html" />
+    <Content Include="Assets\datatables\extensions\ColVis\examples\group_columns.html" />
+    <Content Include="Assets\datatables\extensions\ColVis\examples\index.html" />
+    <Content Include="Assets\datatables\extensions\ColVis\examples\jqueryui.html" />
+    <Content Include="Assets\datatables\extensions\ColVis\examples\mouseover.html" />
+    <Content Include="Assets\datatables\extensions\ColVis\examples\new_init.html" />
+    <Content Include="Assets\datatables\extensions\ColVis\examples\restore.html" />
+    <Content Include="Assets\datatables\extensions\ColVis\examples\simple.html" />
+    <Content Include="Assets\datatables\extensions\ColVis\examples\text.html" />
+    <Content Include="Assets\datatables\extensions\ColVis\examples\title_callback.html" />
+    <Content Include="Assets\datatables\extensions\ColVis\examples\two_tables.html" />
+    <Content Include="Assets\datatables\extensions\ColVis\examples\two_tables_identical.html" />
+    <Content Include="Assets\datatables\extensions\ColVis\js\dataTables.colVis.js" />
+    <Content Include="Assets\datatables\extensions\ColVis\js\dataTables.colVis.min.js" />
+    <Content Include="Assets\datatables\extensions\ColVis\License.txt" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\css\dataTables.fixedColumns.css" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\css\dataTables.fixedColumns.min.css" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\examples\bootstrap.html" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\examples\colvis.html" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\examples\col_filter.html" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\examples\css_size.html" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\examples\index.html" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\examples\index_column.html" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\examples\left_right_columns.html" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\examples\right_column.html" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\examples\rowspan.html" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\examples\server-side-processing.html" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\examples\simple.html" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\examples\size_fixed.html" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\examples\size_fluid.html" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\examples\two_columns.html" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\js\dataTables.fixedColumns.js" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\js\dataTables.fixedColumns.min.js" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\License.txt" />
+    <Content Include="Assets\datatables\extensions\FixedHeader\css\dataTables.fixedHeader.css" />
+    <Content Include="Assets\datatables\extensions\FixedHeader\css\dataTables.fixedHeader.min.css" />
+    <Content Include="Assets\datatables\extensions\FixedHeader\examples\header_footer.html" />
+    <Content Include="Assets\datatables\extensions\FixedHeader\examples\index.html" />
+    <Content Include="Assets\datatables\extensions\FixedHeader\examples\simple.html" />
+    <Content Include="Assets\datatables\extensions\FixedHeader\examples\top_left_right.html" />
+    <Content Include="Assets\datatables\extensions\FixedHeader\examples\two_tables.html" />
+    <Content Include="Assets\datatables\extensions\FixedHeader\examples\zIndexes.html" />
+    <Content Include="Assets\datatables\extensions\FixedHeader\js\dataTables.fixedHeader.js" />
+    <Content Include="Assets\datatables\extensions\FixedHeader\js\dataTables.fixedHeader.min.js" />
+    <Content Include="Assets\datatables\extensions\FixedHeader\Readme.txt" />
+    <Content Include="Assets\datatables\extensions\KeyTable\css\dataTables.keyTable.css" />
+    <Content Include="Assets\datatables\extensions\KeyTable\css\dataTables.keyTable.min.css" />
+    <Content Include="Assets\datatables\extensions\KeyTable\examples\events.html" />
+    <Content Include="Assets\datatables\extensions\KeyTable\examples\html.html" />
+    <Content Include="Assets\datatables\extensions\KeyTable\examples\index.html" />
+    <Content Include="Assets\datatables\extensions\KeyTable\examples\scrolling.html" />
+    <Content Include="Assets\datatables\extensions\KeyTable\examples\simple.html" />
+    <Content Include="Assets\datatables\extensions\KeyTable\js\dataTables.keyTable.js" />
+    <Content Include="Assets\datatables\extensions\KeyTable\js\dataTables.keyTable.min.js" />
+    <Content Include="Assets\datatables\extensions\KeyTable\Readme.txt" />
+    <Content Include="Assets\datatables\extensions\Responsive\css\dataTables.responsive.css" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\child-rows\column-control.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\child-rows\custom-renderer.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\child-rows\disable-child-rows.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\child-rows\index.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\child-rows\right-column.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\child-rows\whole-row-control.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\display-control\auto.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\display-control\classes.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\display-control\complexHeader.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\display-control\fixedHeader.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\display-control\index.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\display-control\init-classes.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\index.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\initialisation\ajax.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\initialisation\className.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\initialisation\default.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\initialisation\index.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\initialisation\new.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\initialisation\option.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\styling\bootstrap.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\styling\compact.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\styling\foundation.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\styling\index.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\examples\styling\scrolling.html" />
+    <Content Include="Assets\datatables\extensions\Responsive\js\dataTables.responsive.js" />
+    <Content Include="Assets\datatables\extensions\Responsive\js\dataTables.responsive.min.js" />
+    <Content Include="Assets\datatables\extensions\Responsive\License.txt" />
+    <Content Include="Assets\datatables\extensions\Scroller\css\dataTables.scroller.css" />
+    <Content Include="Assets\datatables\extensions\Scroller\css\dataTables.scroller.min.css" />
+    <Content Include="Assets\datatables\extensions\Scroller\examples\api_scrolling.html" />
+    <Content Include="Assets\datatables\extensions\Scroller\examples\data\2500.txt" />
+    <Content Include="Assets\datatables\extensions\Scroller\examples\data\ssp.php" />
+    <Content Include="Assets\datatables\extensions\Scroller\examples\index.html" />
+    <Content Include="Assets\datatables\extensions\Scroller\examples\large_js_source.html" />
+    <Content Include="Assets\datatables\extensions\Scroller\examples\server-side_processing.html" />
+    <Content Include="Assets\datatables\extensions\Scroller\examples\simple.html" />
+    <Content Include="Assets\datatables\extensions\Scroller\examples\state_saving.html" />
+    <Content Include="Assets\datatables\extensions\Scroller\images\loading-background.png" />
+    <Content Include="Assets\datatables\extensions\Scroller\js\dataTables.scroller.js" />
+    <Content Include="Assets\datatables\extensions\Scroller\js\dataTables.scroller.min.js" />
+    <Content Include="Assets\datatables\extensions\Scroller\Readme.txt" />
+    <Content Include="Assets\datatables\extensions\TableTools\css\dataTables.tableTools.css" />
+    <Content Include="Assets\datatables\extensions\TableTools\css\dataTables.tableTools.min.css" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\ajax.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\alter_buttons.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\bootstrap.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\button_text.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\collection.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\defaults.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\index.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\jqueryui.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\multiple_tables.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\multi_instance.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\new_init.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\pdf_message.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\plug-in.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\select_column.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\select_multi.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\select_os.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\select_single.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\simple.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\examples\swf_path.html" />
+    <Content Include="Assets\datatables\extensions\TableTools\images\collection.png" />
+    <Content Include="Assets\datatables\extensions\TableTools\images\collection_hover.png" />
+    <Content Include="Assets\datatables\extensions\TableTools\images\copy.png" />
+    <Content Include="Assets\datatables\extensions\TableTools\images\copy_hover.png" />
+    <Content Include="Assets\datatables\extensions\TableTools\images\csv.png" />
+    <Content Include="Assets\datatables\extensions\TableTools\images\csv_hover.png" />
+    <Content Include="Assets\datatables\extensions\TableTools\images\pdf.png" />
+    <Content Include="Assets\datatables\extensions\TableTools\images\pdf_hover.png" />
+    <Content Include="Assets\datatables\extensions\TableTools\images\print.png" />
+    <Content Include="Assets\datatables\extensions\TableTools\images\print_hover.png" />
+    <Content Include="Assets\datatables\extensions\TableTools\images\xls.png" />
+    <Content Include="Assets\datatables\extensions\TableTools\images\xls_hover.png" />
+    <Content Include="Assets\datatables\extensions\TableTools\js\dataTables.tableTools.js" />
+    <Content Include="Assets\datatables\extensions\TableTools\js\dataTables.tableTools.min.js" />
+    <Content Include="Assets\datatables\extensions\TableTools\swf\copy_csv_xls.swf" />
+    <Content Include="Assets\datatables\extensions\TableTools\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="Assets\datatables\images\sort_asc.png" />
+    <Content Include="Assets\datatables\images\sort_asc_disabled.png" />
+    <Content Include="Assets\datatables\images\sort_both.png" />
+    <Content Include="Assets\datatables\images\sort_desc.png" />
+    <Content Include="Assets\datatables\images\sort_desc_disabled.png" />
+    <Content Include="Assets\datatables\jquery.dataTables.css" />
+    <Content Include="Assets\datatables\jquery.dataTables.js" />
+    <Content Include="Assets\datatables\jquery.dataTables.min.css" />
+    <Content Include="Assets\datatables\jquery.dataTables.min.js" />
+    <Content Include="Assets\datatables\jquery.dataTables_themeroller.css" />
+    <Content Include="Assets\error.html" />
+    <Content Include="Assets\faq.html" />
+    <Content Include="Assets\font\fontawesome-webfont.svg" />
+    <Content Include="Assets\guidely.html" />
+    <Content Include="Assets\icons.html" />
+    <Content Include="Assets\img\body-bg.png" />
+    <Content Include="Assets\img\file_extension_3gp.png" />
+    <Content Include="Assets\img\file_extension_7z.png" />
+    <Content Include="Assets\img\file_extension_ace.png" />
+    <Content Include="Assets\img\file_extension_ai.png" />
+    <Content Include="Assets\img\file_extension_aif.png" />
+    <Content Include="Assets\img\file_extension_aiff.png" />
+    <Content Include="Assets\img\file_extension_amr.png" />
+    <Content Include="Assets\img\file_extension_asf.png" />
+    <Content Include="Assets\img\file_extension_asx.png" />
+    <Content Include="Assets\img\file_extension_bat.png" />
+    <Content Include="Assets\img\file_extension_bin.png" />
+    <Content Include="Assets\img\file_extension_bmp.png" />
+    <Content Include="Assets\img\file_extension_bup.png" />
+    <Content Include="Assets\img\file_extension_cab.png" />
+    <Content Include="Assets\img\file_extension_cbr.png" />
+    <Content Include="Assets\img\file_extension_cda.png" />
+    <Content Include="Assets\img\file_extension_cdl.png" />
+    <Content Include="Assets\img\file_extension_cdr.png" />
+    <Content Include="Assets\img\file_extension_chm.png" />
+    <Content Include="Assets\img\file_extension_dat.png" />
+    <Content Include="Assets\img\file_extension_divx.png" />
+    <Content Include="Assets\img\file_extension_dll.png" />
+    <Content Include="Assets\img\file_extension_dmg.png" />
+    <Content Include="Assets\img\file_extension_doc.png" />
+    <Content Include="Assets\img\file_extension_dss.png" />
+    <Content Include="Assets\img\file_extension_dvf.png" />
+    <Content Include="Assets\img\file_extension_dwg.png" />
+    <Content Include="Assets\img\file_extension_eml.png" />
+    <Content Include="Assets\img\file_extension_eps.png" />
+    <Content Include="Assets\img\file_extension_exe.png" />
+    <Content Include="Assets\img\file_extension_fla.png" />
+    <Content Include="Assets\img\file_extension_flv.png" />
+    <Content Include="Assets\img\file_extension_gif.png" />
+    <Content Include="Assets\img\file_extension_gz.png" />
+    <Content Include="Assets\img\file_extension_hqx.png" />
+    <Content Include="Assets\img\file_extension_htm.png" />
+    <Content Include="Assets\img\file_extension_html.png" />
+    <Content Include="Assets\img\file_extension_ifo.png" />
+    <Content Include="Assets\img\file_extension_indd.png" />
+    <Content Include="Assets\img\file_extension_iso.png" />
+    <Content Include="Assets\img\file_extension_jar.png" />
+    <Content Include="Assets\img\file_extension_jpeg.png" />
+    <Content Include="Assets\img\file_extension_jpg.png" />
+    <Content Include="Assets\img\file_extension_lnk.png" />
+    <Content Include="Assets\img\file_extension_log.png" />
+    <Content Include="Assets\img\file_extension_m4a.png" />
+    <Content Include="Assets\img\file_extension_m4b.png" />
+    <Content Include="Assets\img\file_extension_m4p.png" />
+    <Content Include="Assets\img\file_extension_m4v.png" />
+    <Content Include="Assets\img\file_extension_mcd.png" />
+    <Content Include="Assets\img\file_extension_mdb.png" />
+    <Content Include="Assets\img\file_extension_mid.png" />
+    <Content Include="Assets\img\file_extension_mov.png" />
+    <Content Include="Assets\img\file_extension_mp2.png" />
+    <Content Include="Assets\img\file_extension_mp4.png" />
+    <Content Include="Assets\img\file_extension_mpeg.png" />
+    <Content Include="Assets\img\file_extension_mpg.png" />
+    <Content Include="Assets\img\file_extension_msi.png" />
+    <Content Include="Assets\img\file_extension_mswmm.png" />
+    <Content Include="Assets\img\file_extension_ogg.png" />
+    <Content Include="Assets\img\file_extension_pdf.png" />
+    <Content Include="Assets\img\file_extension_png.png" />
+    <Content Include="Assets\img\file_extension_pps.png" />
+    <Content Include="Assets\img\file_extension_ps.png" />
+    <Content Include="Assets\img\file_extension_psd.png" />
+    <Content Include="Assets\img\file_extension_pst.png" />
+    <Content Include="Assets\img\file_extension_ptb.png" />
+    <Content Include="Assets\img\file_extension_pub.png" />
+    <Content Include="Assets\img\file_extension_qbb.png" />
+    <Content Include="Assets\img\file_extension_qbw.png" />
+    <Content Include="Assets\img\file_extension_qxd.png" />
+    <Content Include="Assets\img\file_extension_ram.png" />
+    <Content Include="Assets\img\file_extension_rar.png" />
+    <Content Include="Assets\img\file_extension_rm.png" />
+    <Content Include="Assets\img\file_extension_rmvb.png" />
+    <Content Include="Assets\img\file_extension_rtf.png" />
+    <Content Include="Assets\img\file_extension_sea.png" />
+    <Content Include="Assets\img\file_extension_ses.png" />
+    <Content Include="Assets\img\file_extension_sit.png" />
+    <Content Include="Assets\img\file_extension_sitx.png" />
+    <Content Include="Assets\img\file_extension_ss.png" />
+    <Content Include="Assets\img\file_extension_swf.png" />
+    <Content Include="Assets\img\file_extension_tgz.png" />
+    <Content Include="Assets\img\file_extension_thm.png" />
+    <Content Include="Assets\img\file_extension_tif.png" />
+    <Content Include="Assets\img\file_extension_tmp.png" />
+    <Content Include="Assets\img\file_extension_torrent.png" />
+    <Content Include="Assets\img\file_extension_ttf.png" />
+    <Content Include="Assets\img\file_extension_txt.png" />
+    <Content Include="Assets\img\file_extension_vcd.png" />
+    <Content Include="Assets\img\file_extension_vob.png" />
+    <Content Include="Assets\img\file_extension_wav.png" />
+    <Content Include="Assets\img\file_extension_wma.png" />
+    <Content Include="Assets\img\file_extension_wmv.png" />
+    <Content Include="Assets\img\file_extension_wps.png" />
+    <Content Include="Assets\img\file_extension_xls.png" />
+    <Content Include="Assets\img\file_extension_xls_grande.png" />
+    <Content Include="Assets\img\file_extension_xpi.png" />
+    <Content Include="Assets\img\file_extension_zip.png" />
+    <Content Include="Assets\img\file_manager.png" />
+    <Content Include="Assets\img\glyphicons-halflings-white.html" />
+    <Content Include="Assets\img\glyphicons-halflings.html" />
+    <Content Include="Assets\img\icons-sa7c41345d9.png" />
+    <Content Include="Assets\img\message_avatar1.png" />
+    <Content Include="Assets\img\message_avatar2.png" />
+    <Content Include="Assets\img\servicio1.jpg" />
+    <Content Include="Assets\img\servicio2.jpg" />
+    <Content Include="Assets\img\servicio3.jpg" />
+    <Content Include="Assets\img\signin\check.png" />
+    <Content Include="Assets\img\signin\fb_btn.png" />
+    <Content Include="Assets\img\signin\password.png" />
+    <Content Include="Assets\img\signin\twitter_btn.png" />
+    <Content Include="Assets\img\signin\user.png" />
+    <Content Include="Assets\index.html" />
+    <Content Include="Assets\js\base.js" />
+    <Content Include="Assets\js\bootstrap.js" />
+    <Content Include="Assets\js\chart.min.js" />
+    <Content Include="Assets\js\charts\area.js" />
+    <Content Include="Assets\js\charts\bar.js" />
+    <Content Include="Assets\js\charts\donut.js" />
+    <Content Include="Assets\js\charts\line.js" />
+    <Content Include="Assets\js\charts\pie.js" />
+    <Content Include="Assets\js\excanvas.min.js" />
+    <Content Include="Assets\js\faq.js" />
+    <Content Include="Assets\js\full-calendar\fullcalendar.css" />
+    <Content Include="Assets\js\full-calendar\fullcalendar.min.js" />
+    <Content Include="Assets\js\guidely\guidely-number.png" />
+    <Content Include="Assets\js\guidely\guidely.css" />
+    <Content Include="Assets\js\guidely\guidely.min.js" />
+    <Content Include="Assets\js\jquery-1.7.2.min.js" />
+    <Content Include="Assets\js\signin.js" />
+    <Content Include="Assets\login.html" />
+    <Content Include="Assets\pricing.html" />
+    <Content Include="Assets\reports.html" />
+    <Content Include="Assets\shortcodes.html" />
+    <Content Include="Assets\signup.html" />
+    <Content Include="Biblioteca.aspx" />
+    <Content Include="Biblioteca\index.html" />
+    <Content Include="Carpetas.aspx" />
     <Content Include="Content\AjaxControlToolkit\Images\AsyncFileUpload.Button.png" />
     <Content Include="Content\AjaxControlToolkit\Images\BalloonPopup.CloudSprite.gif" />
     <Content Include="Content\AjaxControlToolkit\Images\BalloonPopup.CloudSprite.png" />
@@ -311,7 +722,12 @@
     <Content Include="Content\AjaxControlToolkit\Styles\Twitter.min.css" />
     <Content Include="Content\AjaxControlToolkit\Styles\ValidatorCallout.css" />
     <Content Include="Content\AjaxControlToolkit\Styles\ValidatorCallout.min.css" />
+    <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
+    <Content Include="Noticias.aspx" />
+    <Content Include="Perfiles.aspx" />
+    <Content Include="Permisos.aspx" />
     <Content Include="Scripts\AjaxControlToolkit\Debug\Accordion.debug.js" />
     <Content Include="Scripts\AjaxControlToolkit\Debug\AjaxFileUpload.debug.js" />
     <Content Include="Scripts\AjaxControlToolkit\Debug\AlwaysVisibleControl.debug.js" />
@@ -624,16 +1040,128 @@
     <Content Include="Scripts\AjaxControlToolkit\Release\ToggleButton.js" />
     <Content Include="Scripts\AjaxControlToolkit\Release\UpdatePanelAnimation.js" />
     <Content Include="Scripts\AjaxControlToolkit\Release\ValidatorCallout.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Usuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgendaUsuarios.aspx.cs">
+      <DependentUpon>AgendaUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgendaUsuarios.aspx.designer.cs">
+      <DependentUpon>AgendaUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Biblioteca.aspx.cs">
+      <DependentUpon>Biblioteca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Biblioteca.aspx.designer.cs">
+      <DependentUpon>Biblioteca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Carpetas.aspx.cs">
+      <DependentUpon>Carpetas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carpetas.aspx.designer.cs">
+      <DependentUpon>Carpetas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comun.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Noticias.aspx.cs">
+      <DependentUpon>Noticias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Noticias.aspx.designer.cs">
+      <DependentUpon>Noticias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Perfiles.aspx.cs">
+      <DependentUpon>Perfiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfiles.aspx.designer.cs">
+      <DependentUpon>Perfiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Permisos.aspx.cs">
+      <DependentUpon>Permisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Permisos.aspx.designer.cs">
+      <DependentUpon>Permisos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sitio.Master.cs">
+      <DependentUpon>Sitio.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio.Master.designer.cs">
+      <DependentUpon>Sitio.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.aspx.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuarios.aspx.designer.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidad.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\font\fontawesome-webfont.eot" />
+    <Content Include="Assets\font\fontawesome-webfont.svgz" />
+    <Content Include="Assets\font\fontawesome-webfont.ttf" />
+    <Content Include="Assets\font\fontawesome-webfont.woff" />
+    <Content Include="Assets\font\fontawesome-webfontd41d.eot" />
+    <Content Include="Assets\font\FontAwesome.otf" />
+    <Content Include="Assets\datatables\extensions\ColReorder\Readme.md" />
+    <Content Include="Assets\datatables\extensions\ColVis\Readme.md" />
+    <Content Include="Assets\datatables\extensions\FixedColumns\Readme.md" />
+    <Content Include="Assets\datatables\extensions\Responsive\css\dataTables.responsive.scss" />
+    <Content Include="Assets\datatables\extensions\Responsive\Readme.md" />
+    <Content Include="Assets\datatables\extensions\TableTools\images\psd\collection.psd" />
+    <Content Include="Assets\datatables\extensions\TableTools\images\psd\copy document.psd" />
+    <Content Include="Assets\datatables\extensions\TableTools\images\psd\file_types.psd" />
+    <Content Include="Assets\datatables\extensions\TableTools\images\psd\printer.psd" />
+    <Content Include="Assets\datatables\extensions\TableTools\Readme.md" />
     <None Include="packages.config" />
+    <Content Include="Sitio.Master" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -644,6 +1172,12 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{a9b7d69c-c47a-4cec-b7aa-a52aa5e951c7}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

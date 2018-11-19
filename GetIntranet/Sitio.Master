@@ -1,0 +1,205 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Sitio.master.cs" Inherits="GetIntranet.Sitio" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <title>Intranet - GetSoft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="Assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+  
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600"
+        rel="stylesheet">
+    <link href="Assets/css/font-awesome.css" rel="stylesheet">
+    <link href="Assets/css/style.css" rel="stylesheet">
+    <link href="Assets/css/pages/dashboard.css" rel="stylesheet">
+
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server" enctype="multipart/form-data">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Path="~/Scripts/AjaxControlToolkit/Bundle" />
+             
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
+                        class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="Default.aspx">Intranet Tagor</a>
+                    <div class="nav-collapse">
+                        <ul class="nav pull-right">
+                            <%--<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                                class="icon-cog"></i>Cuenta <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="javascript:;">Configuración</a></li>
+
+                                </ul>
+                            </li>--%>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                                class="icon-user"></i><%= Session["variableNomUsuario"] %> <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="javascript:;">Cuenta</a></li>
+                                    <li><a href="javascript:;">Ayuda</a></li>
+                                    <li>
+
+                                        <asp:LinkButton Text="Cerrar Sesión" ID="btnCerrerSesion" runat="server" OnClick="btnCerrarSesion_Click"   />
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+                <!-- /container -->
+            </div>
+            <!-- /navbar-inner -->
+        </div>
+
+        <div class="subnavbar">
+            <div class="subnavbar-inner">
+                <div class="container">
+                    <ul class="mainnav">
+                        <li runat="server" id="LiDefault" ><a href="Default.aspx"><i class=" icon-home"></i><span>Home</span></a></li>
+                        <li runat="server" id="LiNoticias" visible="false"><a href="Default.aspx"><i class="icon-list-alt"></i><span>Noticias</span></a></li>
+                        <li runat="server" id="LiBiblioteca"><a href="Biblioteca.aspx"><i class=" icon-folder-open"></i><span>Biblioteca</span> </a></li>
+                        <li runat="server" id="LiAgendaUsuario"><a href="AgendaUsuarios.aspx"><i class=" icon-user"></i><span>Agenda</span> </a></li>
+                        <li runat="server" id="LiAdministracion" class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i><span>Admin</span> <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Usuarios.aspx">Usuarios</a></li>
+                                <li><a href="Perfiles.aspx">Perfiles</a></li>
+                                <li><a href="Permisos.aspx">Permisos</a></li>
+                                <li><a href="Carpetas.aspx">Carpetas</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /container -->
+            </div>
+            <!-- /subnavbar-inner -->
+        </div>
+        <!-- /subnavbar -->
+
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+        </div>
+        <!-- /container -->
+
+        <%--<script src="js/jquery-1.7.2.min.js"></script>--%>
+
+
+        <%--<script src="js/bootstrap.js"></script>--%>
+    </form>
+
+
+    <!-- Le javascript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="Assets/js/jquery-1.7.2.min.js"></script>
+    <%--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>--%>
+    <script src="Assets/js/bootstrap.js"></script>
+    <script src="Assets/js/base.js"></script>
+
+    <%--<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>--%>
+    <script src="Assets/datatables/jquery.dataTables.min.js"></script>
+    <script src="Assets/datatables/2/dataTables.bootstrap.min.js"></script>
+    <%--<script src="Assets/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="Assets/datatables/extensions/bootstrap-select/bootstrap-select.min.js"></script>--%>
+
+
+    <script>
+
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        prm.add_endRequest(function () {
+            cargar();
+        });
+
+        $(document).ready(function () {
+            cargar();
+        });
+
+        function cargar() {
+
+        }
+
+        $(document).ready(function () {
+            jQuery('.grillaDatatable').DataTable({
+
+                "language": {
+                    "sProcessing": "Procesando...",
+                    "sLengthMenu": "Mostrar _MENU_ registros",
+                    "sZeroRecords": "No se encontraron resultados",
+                    "sEmptyTable": "Ningún dato disponible en esta tabla",
+                    "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                    "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                    "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+                    "sInfoPostFix": "",
+                    "sSearch": "Buscar:",
+                    "sUrl": "",
+                    "sInfoThousands": ",",
+                    "sLoadingRecords": "Cargando...",
+                    "oPaginate": {
+                        "sFirst": "Primero",
+                        "sLast": "Último",
+                        "sNext": "Siguiente",
+                        "sPrevious": "Anterior"
+                    }
+                }
+
+                /**,
+                dom: 'Bfrtip',
+                buttons: [
+                    'copyHtml5',
+                    'csvHtml5',
+                    'pdfHtml5'
+                ] **/
+
+            });
+        });
+
+
+
+
+
+    </script>
+
+
+    <asp:ContentPlaceHolder ID="footer" runat="server">
+    </asp:ContentPlaceHolder>
+
+</body>
+</html>
