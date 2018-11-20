@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link href="Assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="Assets/css/bootstrap-responsive.min.css" rel="stylesheet">
-  
+
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600"
         rel="stylesheet">
     <link href="Assets/css/font-awesome.css" rel="stylesheet">
@@ -29,14 +29,15 @@
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+
 </head>
 <body>
 
     <form id="form1" runat="server" enctype="multipart/form-data">
-        <asp:ScriptManager runat="server">
+        <asp:ScriptManager runat="server" EnablePartialRendering="true">
             <Scripts>
                 <asp:ScriptReference Path="~/Scripts/AjaxControlToolkit/Bundle" />
-             
+
                 <%--Framework Scripts--%>
                 <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
                 <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
@@ -72,7 +73,7 @@
                                     <li><a href="javascript:;">Ayuda</a></li>
                                     <li>
 
-                                        <asp:LinkButton Text="Cerrar Sesión" ID="btnCerrerSesion" runat="server" OnClick="btnCerrarSesion_Click"   />
+                                        <asp:LinkButton Text="Cerrar Sesión" ID="btnCerrerSesion" runat="server" OnClick="btnCerrarSesion_Click" />
                                     </li>
 
                                 </ul>
@@ -91,16 +92,17 @@
             <div class="subnavbar-inner">
                 <div class="container">
                     <ul class="mainnav">
-                        <li runat="server" id="LiDefault" ><a href="Default.aspx"><i class=" icon-home"></i><span>Home</span></a></li>
+                        <li runat="server" id="LiDefault"><a href="Default.aspx"><i class=" icon-home"></i><span>Home</span></a></li>
                         <li runat="server" id="LiNoticias" visible="false"><a href="Default.aspx"><i class="icon-list-alt"></i><span>Noticias</span></a></li>
                         <li runat="server" id="LiBiblioteca"><a href="Biblioteca.aspx"><i class=" icon-folder-open"></i><span>Biblioteca</span> </a></li>
                         <li runat="server" id="LiAgendaUsuario"><a href="AgendaUsuarios.aspx"><i class=" icon-user"></i><span>Agenda</span> </a></li>
                         <li runat="server" id="LiAdministracion" class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i><span>Admin</span> <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="Usuarios.aspx">Usuarios</a></li>
-                                <li><a href="Perfiles.aspx">Perfiles</a></li>
-                                <li><a href="Permisos.aspx">Permisos</a></li>
-                                <li><a href="Carpetas.aspx">Carpetas</a></li>
+                            <ul class="dropdown-menu" id="LiAdmin" runat="server">
+                                <li><a href="Usuarios.aspx" id="LiUsuarios" runat="server">Usuarios</a></li>
+                                <li><a href="Perfiles.aspx" id="LiPerfiles" runat="server">Perfiles</a></li>
+                                <li><a href="Permisos.aspx" id="LiPermisos" runat="server">Permisos</a></li>
+                                <li><a href="Carpetas.aspx" id="LiCarpetas" runat="server">Carpetas</a></li>
+                                <li><a href="Noticias.aspx" id="LiNoticiasMan" runat="server">Noticias</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -190,13 +192,10 @@
 
             });
         });
-
-
-
-
-
     </script>
 
+
+    
 
     <asp:ContentPlaceHolder ID="footer" runat="server">
     </asp:ContentPlaceHolder>

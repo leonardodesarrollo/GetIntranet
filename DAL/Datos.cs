@@ -653,5 +653,105 @@ namespace DAL
             }
         }
 
+
+        public DataSet GetBuscarNoticia(int? IdNoticia)
+        {
+            DbCommand cmd = db.GetStoredProcCommand("stp_BuscarNoticia");
+
+            db.AddInParameter(cmd, "@idNoticia", DbType.String, IdNoticia);
+
+            try
+            {
+                return db.ExecuteDataSet(cmd);
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("No se pudo buscar la noticia , " + ex.Message, ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("No se pudo buscar la biblioteca , " + ex.Message, ex);
+            }
+        }
+
+
+
+        public void SetIngresarNoticia(int? IdAlert, string Titulo, string autor, string descripcion,
+            string url, string urlToImage,string fuenteId, string fuenteNombre, string IdEstado,
+            string relevante, string idComuna, int? IdUsuarioAsignado, int? idUsuarioAsignadoPor, 
+            string IdSubCategoria, string IdCategoria)
+        {
+            DbCommand cmd = db.GetStoredProcCommand("usp_NOTICIASInsert");
+            db.AddInParameter(cmd, "@ID_ALERT", DbType.String, IdAlert);
+            db.AddInParameter(cmd, "@TITULO", DbType.String, Titulo);
+            db.AddInParameter(cmd, "@autor", DbType.String, autor);
+            db.AddInParameter(cmd, "@DESCRIPCION", DbType.String, descripcion);
+            db.AddInParameter(cmd, "@URL", DbType.String, url);
+            db.AddInParameter(cmd, "@URLTOIMAGE", DbType.String, urlToImage);
+            db.AddInParameter(cmd, "@FUENTE_ID", DbType.String, fuenteId);
+            db.AddInParameter(cmd, "@FUENTE_NOMBRE", DbType.String, fuenteNombre);
+            db.AddInParameter(cmd, "@IdEstado", DbType.String, IdEstado);
+            db.AddInParameter(cmd, "@Relevante", DbType.String, relevante);
+            db.AddInParameter(cmd, "@IdComuna", DbType.String, idComuna);
+            db.AddInParameter(cmd, "@IdUsuarioAsignado", DbType.String, IdUsuarioAsignado);
+            db.AddInParameter(cmd, "@IdUsuarioAsignadoPor", DbType.String, idUsuarioAsignadoPor);
+            db.AddInParameter(cmd, "@IdSubCategoria", DbType.String, IdSubCategoria);
+            db.AddInParameter(cmd, "@IdCategoria", DbType.String, IdCategoria);
+            
+            try
+            {
+                db.ExecuteNonQuery(cmd);
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("No se puede grabar la noticia, " + ex.Message, ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("No se puede grabar la noticia, " + ex.Message, ex);
+            }
+        }
+
+
+        public void SetEditarNoticia(int IdNoticia, int? IdAlert, string Titulo, string autor, string descripcion,
+            string url, string urlToImage, string fuenteId, string fuenteNombre, string IdEstado,
+            string relevante, string idComuna, int? IdUsuarioAsignado, int? idUsuarioAsignadoPor,
+            string IdSubCategoria, string IdCategoria)
+        {
+            DbCommand cmd = db.GetStoredProcCommand("usp_NOTICIASUpdate");
+            
+            db.AddInParameter(cmd, "@ID_NOTICIA", DbType.String, IdNoticia);
+            db.AddInParameter(cmd, "@ID_ALERT", DbType.String, IdAlert);
+            db.AddInParameter(cmd, "@TITULO", DbType.String, Titulo);
+            db.AddInParameter(cmd, "@autor", DbType.String, autor);
+            db.AddInParameter(cmd, "@DESCRIPCION", DbType.String, descripcion);
+            db.AddInParameter(cmd, "@URL", DbType.String, url);
+            db.AddInParameter(cmd, "@URLTOIMAGE", DbType.String, urlToImage);
+            db.AddInParameter(cmd, "@FUENTE_ID", DbType.String, fuenteId);
+            db.AddInParameter(cmd, "@FUENTE_NOMBRE", DbType.String, fuenteNombre);
+            db.AddInParameter(cmd, "@IdEstado", DbType.String, IdEstado);
+            db.AddInParameter(cmd, "@Relevante", DbType.String, relevante);
+            db.AddInParameter(cmd, "@IdComuna", DbType.String, idComuna);
+            db.AddInParameter(cmd, "@IdUsuarioAsignado", DbType.String, IdUsuarioAsignado);
+            db.AddInParameter(cmd, "@IdUsuarioAsignadoPor", DbType.String, idUsuarioAsignadoPor);
+            db.AddInParameter(cmd, "@IdSubCategoria", DbType.String, IdSubCategoria);
+            db.AddInParameter(cmd, "@IdCategoria", DbType.String, IdCategoria);
+
+            try
+            {
+                db.ExecuteNonQuery(cmd);
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("No se puede grabar la noticia, " + ex.Message, ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("No se puede grabar la noticia, " + ex.Message, ex);
+            }
+        }
+
+        
+
     }
 }

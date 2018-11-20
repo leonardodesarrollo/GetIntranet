@@ -9,6 +9,10 @@ using System.Collections.Specialized;
 using DAL;
 using System.IO;
 using System.Web.UI.HtmlControls;
+using System.Configuration;
+using AegisImplicitMail;
+using System.Net.Mail;
+using System.ComponentModel;
 
 namespace GetIntranet
 {
@@ -216,25 +220,22 @@ namespace GetIntranet
 
                     if (email != string.Empty)
                     {
-                        //string asunto = ConfigurationManager.AppSettings.Get("asuntoEmail");
-                        ////string mensaje = ConfigurationManager.AppSettings.Get("mensajeEmail");
-                        //string mensaje = "El presente correo, es una notificación de nuestro Sistema de Carpeta Virtual SCV-UpCom. <br><br>";
+                        string asunto = ConfigurationManager.AppSettings.Get("asuntoEmail");
+                        //string mensaje = ConfigurationManager.AppSettings.Get("mensajeEmail");
+                        string mensaje = "El presente correo, es una notificación de nuestro Sistema de Carpeta Virtual SCV-UpCom. <br><br>";
 
-                        //mensaje += "<b>Con fecha :</b> " + DateTime.Now.ToString("G") + "";
-                        //mensaje += "<br> <b>Se encuentra disponible el archivo en la carpeta :</b> " + lblPath.Text + "/" + fuArchivo.FileName;
-                        //mensaje += "<br> <b>Subido por:</b> " + nombreUsuario + " " + apellidoUsuario + "<br><br>";
+                        mensaje += "<b>Con fecha :</b> " + DateTime.Now.ToString("G") + "";
+                        mensaje += "<br> <b>Se encuentra disponible el archivo en la carpeta :</b> " + lblPath.Text + "/" + fuArchivo.FileName;
+                        mensaje += "<br> <b>Subido por:</b> " + nombreUsuario + " " + apellidoUsuario + "<br><br>";
 
-                        //mensaje += ConfigurationManager.AppSettings.Get("mensajeEmail");
+                        mensaje += ConfigurationManager.AppSettings.Get("mensajeEmail");
 
-                        //mensaje += "<br><br><br> Atentamente,";
-                        //mensaje += "<br><br> <b>UpCom Business & Service Center</b>";
-                        //mensaje += "<br> San Diego 283 Stgo";
-                        //mensaje += "<br> Prat 725 p6 Valparaíso";
-                        //mensaje += "<br> Fono 56 (2)  28407324";
-                        //mensaje += "<br> http://www.UpCom.cl";
+                        mensaje += "<br><br><br> Atentamente,";
+                        mensaje += "<br><br> <b>Tagor</b>";
+                        mensaje += "<br> http://www.tagor.cl";
 
-                        //asunto = asunto + txtNombreArchivo.Text + " (" + fuArchivo.FileName + ")";
-                        //enviarEmail(email, asunto, mensaje, emailCC);
+                        asunto = asunto + txtNombreArchivo.Text + " (" + fuArchivo.FileName + ")";
+                        EnviarEmailSSLImplicito(email, asunto, mensaje, emailCC);
                     }
 
                     buscar();
@@ -254,6 +255,9 @@ namespace GetIntranet
             }
         }
 
+
+
+
         void buscar()
         {
             grvDetalleBiblioteca.DataSource = dal.GetBuscarBibliotecaPorIdTipo(hfIdSeccion.Value);
@@ -271,11 +275,13 @@ namespace GetIntranet
 
                 //PERFILES
 
-                string idPerfil = Session["variablePerfil"].ToString();
+                string idPerfil = Session["variableIdPerfil"].ToString();
                 string usuario = Session["variableUsuario"].ToString();
 
-                if (idPerfil == "2")
+                if (idPerfil != "1")
                 {
+                    _imgEliminar.Visible = false;
+                    
                     if (usuario == _lblUsuario.Text)
                     {
                         _imgEliminar.Visible = true;
@@ -286,10 +292,6 @@ namespace GetIntranet
                     }
                 }
 
-                if (idPerfil == "3")
-                {
-                    _imgEliminar.Visible = false;
-                }
                 
                 //FIN PERFILES
 
@@ -314,8 +316,8 @@ namespace GetIntranet
                 }
                 else
                 {
-                    //ScriptManager scriptManager = ScriptManager.GetCurrent(this.Page);
-                    //scriptManager.RegisterPostBackControl(_imgVisualizar);
+                    ScriptManager scriptManager = ScriptManager.GetCurrent(this.Page);
+                    scriptManager.RegisterPostBackControl(_imgVisualizar);
                 }
 
                 if (tipoArchivo == "xls")
@@ -460,42 +462,59 @@ namespace GetIntranet
             }
         }
 
-        //private void enviarEmail(string email, string asunto, string mensaje, string emailCC)
-        //{
-        //    MailMessage correo = new MailMessage();
-        //    //Attachment adjunto = new Attachment(Server.MapPath(hfrutaArchivoPdf.Value));
+        public void EnviarEmailSSLImplicito(string email, string body, string sub, string rutaAdjunto)
+        {
+            var from = "notificaciones@tagor.cl";
+            var host = "mail.tagor.cl";
+            var user = "notificaciones@tagor.cl";
+            var pass = "notificaciones123**";
 
-        //    correo.From = new MailAddress("<smd@upcom.cl>");
-        //    //correo.From = new MailAddress("<remuneraciones@skchile.cl>");
+            //Generate Message 
+            var mymessage = new MimeMailMessage();
+            mymessage.From = new MimeMailAddress(from);
 
-        //    string bodyEmail = mensaje;
+            String[] AMailto = email.Split(';');
+            foreach (String mail in AMailto)
+            {
+                mymessage.To.Add(new MailAddress(mail));
+            }
 
-        //    String[] AMailto = email.Split(';');
-        //    foreach (String mail in AMailto)
-        //    {
-        //        correo.To.Add(new MailAddress(mail));
-        //    }
-        //    //correo.To.Add(new MailAddress(email));
-        //    correo.Subject = asunto;
+            mymessage.Subject = sub;
+            mymessage.Body = body;
+            mymessage.SubjectEncoding = System.Text.Encoding.UTF8;
+            mymessage.HeadersEncoding = System.Text.Encoding.UTF8;
+            mymessage.IsBodyHtml = true;
+            mymessage.Priority = MailPriority.High;
 
-        //    if (emailCC != string.Empty)
-        //    {
-        //        String[] AMailtoCC = emailCC.Split(';');
-        //        foreach (String mail in AMailtoCC)
-        //        {
-        //            correo.To.Add(new MailAddress(mail));
-        //        }
-        //        //correo.CC.Add(new MailAddress(emailCC));
-        //    }
+            if (rutaAdjunto != string.Empty)
+            {
+                MimeAttachment adj = new MimeAttachment(System.Web.HttpContext.Current.Server.MapPath(rutaAdjunto));
+                mymessage.Attachments.Add(adj);
+            }
 
-        //    correo.IsBodyHtml = true;
-        //    correo.Body = bodyEmail;
-        //    //correo.Attachments.Add(adjunto);
-        //    SmtpClient client = new SmtpClient();
-        //    client.Send(correo);
-        //}
+            //Create Smtp Client
+            var mailer = new MimeMailer(host, 465);
+            mailer.User = user;
+            mailer.Password = pass;
+            mailer.SslType = SslMode.Ssl;
+            mailer.AuthenticationMode = AuthenticationType.Base64;
 
-     
+            //Set a delegate function for call back
+            mailer.SendCompleted += compEvent;
+            mailer.SendMailAsync(mymessage);
+        }
+
+        //Call back function
+        private void compEvent(object sender, AsyncCompletedEventArgs e)
+        {
+            if (e.UserState != null)
+                Console.Out.WriteLine(e.UserState.ToString());
+
+            Console.Out.WriteLine("is it canceled? " + e.Cancelled);
+
+            if (e.Error != null)
+                Console.Out.WriteLine("Error : " + e.Error.Message);
+        }
 
         void limpiar(ControlCollection controles)
         {

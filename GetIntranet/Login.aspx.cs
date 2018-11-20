@@ -76,7 +76,7 @@ namespace GetIntranet
 
                         if (activo == "1")
                         {
-                            Response.Redirect("Biblioteca.aspx");
+                            Response.Redirect("NoticiasNew.aspx");
                         }
                         else
                         {

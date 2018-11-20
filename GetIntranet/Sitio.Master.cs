@@ -11,7 +11,6 @@ namespace GetIntranet
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
             try
             {
                 if (!Page.IsPostBack)
@@ -58,66 +57,11 @@ namespace GetIntranet
         void Perfiles()
         {
             string idPerfil = Session["variableIdPerfil"].ToString();
-            //if (idPerfil == "1")
-            //{
-            //    lblEmpresa.Text = "Tagor";
-
-            //    liFacturacion.Visible = true;
-            //}
-
-            //if (idPerfil == "2")
-            //{
-            //    liAdministracion.Visible = false;
-            //    liUsuarios.Visible = false;
-            //    liMantenciones.Visible = false;
-            //    liReporteTickets.Visible = false;
-            //    liIngresarOT.Visible = false;
-            //    lblEmpresa.Text = Session["variableEmpresa"].ToString();
-            //}
-
-            //if (idPerfil == "3")
-            //{
-            //    liAdministracion.Visible = true;
-            //    liUsuarios.Visible = false;
-
-            //    liMantenciones.Visible = true;
-            //    liFacturacion.Visible = true;
-            //    liFacturacion.Visible = true;
-            //    liGeneraFacturacion.Visible = true;
-            //    lblEmpresa.Text = Session["variableEmpresa"].ToString();
-            //}
-
-            //if (idPerfil == "4")
-            //{
-            //    liAdministracion.Visible = false;
-            //    liUsuarios.Visible = false;
-            //    liReportes.Visible = false;
-            //    liReporteTickets.Visible = false;
-            //    liMantenciones.Visible = false;
-
-            //    lblEmpresa.Text = Session["variableEmpresa"].ToString();
-            //}
-
-            //if (idPerfil == "5")
-            //{
-            //    liAdministracion.Visible = false;
-            //    liUsuarios.Visible = false;
-            //    liReporteTickets.Visible = true;
-            //    liMantenciones.Visible = false;
-
-            //    lblEmpresa.Text = Session["variableEmpresa"].ToString();
-            //}
-
-            //if (idPerfil == "6")
-            //{
-            //    liAdministracion.Visible = true;
-            //    liUsuarios.Visible = false;
-            //    liReporteTickets.Visible = true;
-            //    liMantenciones.Visible = true;
-            //    liFacturacion.Visible = true;
-            //    liGeneraFacturacion.Visible = true;
-            //    lblEmpresa.Text = Session["variableEmpresa"].ToString();
-            //}
+            if (idPerfil != "1")
+            {
+                LiAdmin.Visible = false;
+            }
+            
 
         }
     }

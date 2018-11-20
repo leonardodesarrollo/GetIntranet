@@ -47,14 +47,20 @@
     <Reference Include="AegisImplicitMail">
       <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\AegisImplicitMail.dll</HintPath>
     </Reference>
-    <Reference Include="AjaxControlToolkit, Version=18.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
-      <HintPath>..\packages\AjaxControlToolkit.18.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.1\lib\net40\AjaxControlToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="AjaxControlToolkit.StaticResources, Version=18.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
-      <HintPath>..\packages\AjaxControlToolkit.StaticResources.18.1.0\lib\net40\AjaxControlToolkit.StaticResources.dll</HintPath>
+    <Reference Include="AjaxControlToolkit.HtmlEditor.Sanitizer, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.HtmlEditor.Sanitizer.18.1.1\lib\net40\AjaxControlToolkit.HtmlEditor.Sanitizer.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit.StaticResources, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.StaticResources.18.1.1\lib\net40\AjaxControlToolkit.StaticResources.dll</HintPath>
     </Reference>
     <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp">
       <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\itextsharp.dll</HintPath>
@@ -101,8 +107,8 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NPOI">
       <HintPath>..\..\TagorManuCRM\TagorManuCRM\bin\NPOI.dll</HintPath>
@@ -358,6 +364,261 @@
     <Content Include="Assets\error.html" />
     <Content Include="Assets\faq.html" />
     <Content Include="Assets\font\fontawesome-webfont.svg" />
+    <Content Include="Assets\froala_editor_2.9.1\css\froala_editor.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\froala_editor.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\froala_editor.pkgd.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\froala_editor.pkgd.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\froala_style.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\froala_style.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\char_counter.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\char_counter.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\code_view.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\code_view.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\colors.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\colors.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\draggable.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\draggable.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\emoticons.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\emoticons.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\file.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\file.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\fullscreen.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\fullscreen.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\help.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\help.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\image.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\image.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\image_manager.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\image_manager.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\line_breaker.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\line_breaker.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\quick_insert.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\quick_insert.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\special_characters.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\special_characters.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\table.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\table.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\video.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\plugins\video.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\themes\dark.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\themes\dark.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\themes\gray.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\themes\gray.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\themes\red.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\themes\red.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\themes\royal.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\themes\royal.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\third_party\embedly.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\third_party\embedly.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\third_party\font_awesome.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\third_party\font_awesome.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\third_party\image_tui.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\third_party\image_tui.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\third_party\spell_checker.css" />
+    <Content Include="Assets\froala_editor_2.9.1\css\third_party\spell_checker.min.css" />
+    <Content Include="Assets\froala_editor_2.9.1\editor.jpg" />
+    <Content Include="Assets\froala_editor_2.9.1\html\3rd-party\at.js.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\3rd-party\aviary\index.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\3rd-party\bootstrap\grid.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\3rd-party\bootstrap\lists.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\3rd-party\bootstrap\modal.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\3rd-party\code-mirror.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\3rd-party\font-awesome-5-css.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\3rd-party\font-awesome-5-js.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\3rd-party\jquery\mobile.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\3rd-party\jquery\ui_modal.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\3rd-party\require_js\index.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\3rd-party\require_js\js\app.js" />
+    <Content Include="Assets\froala_editor_2.9.1\html\3rd-party\require_js\js\lib\require.js" />
+    <Content Include="Assets\froala_editor_2.9.1\html\3rd-party\spell-checker\spell-checker.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\3rd-party\tui\index.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\api\get_html.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\api\init_destroy.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\api\insert_html.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\api\live_code_preview.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\api\live_content_preview.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\api\selection.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\buttons\custom_buttons.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\buttons\custom_dropdown.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\buttons\external_button.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\buttons\subscript_superscript.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\events\blur_focus.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\events\content_changed.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\events\drop.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\events\image_removed.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\events\initialized_destroy.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\file_s3_upload.php" />
+    <Content Include="Assets\froala_editor_2.9.1\html\image\custom_button.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\image\default_width.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\image\image_styles.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\image\insert_base64.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\image_s3_upload.php" />
+    <Content Include="Assets\froala_editor_2.9.1\html\initialization\edit_in_popup.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\initialization\initialized_event.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\initialization\init_on_button.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\initialization\init_on_click.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\initialization\init_on_h1.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\initialization\init_on_image.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\initialization\init_on_link.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\init_inside_iframe\basic.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\init_inside_iframe\content.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\init_inside_iframe\inline.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\init_on_click\basic.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\init_on_click\inline.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\init_on_click\two_editors.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\international\direction_rtl.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\international\language.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\international\rtl_ltr_buttons.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\link\custom_validation.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\link\link_styles.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\link\predefined_links.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\misc\scrollable_container.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\misc\scrollable_container_inline.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\paragraph_modes\enter_br.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\paragraph_modes\enter_div.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\paragraph_modes\enter_p.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\paste\attrs.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\paste\plain.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\paste\tags.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\plugins\char_counter.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\plugins\full_screen.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\plugins\line_breaker.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\plugins\quick_insert.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\popular\disable_edit.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\popular\disable_paragraphs.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\popular\full.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\popular\full_page.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\popular\iframe.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\popular\init_on_click.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\popular\textarea.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\popular\toolbar_buttons.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\popular\toolbar_inline.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\popular\two_instances.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\popular\z_index.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\popups\colors.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\popups\custom.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\popups\emoticons.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\styling\adjustable_height.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\styling\font_family.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\styling\height.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\styling\inline.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\styling\paragraph.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\styling\placeholder.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\styling\width.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\table\cell_style.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\table\insert_helper.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\table\nested.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\table\resize.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\table\style.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\tests\bottom_offset_scrollable_container.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\tests\bottom_scrollable_container.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\tests\core.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\tests\full_br.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\tests\full_page_bottom.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\tests\image_manager.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\tests\init_on_click\full_page.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\tests\max_height.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\tests\toolbar_inline_two.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\tests\top_offset_scrollable_container.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\tests\top_scrollable_container.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\themes\dark.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\themes\gray.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\themes\red.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\themes\royal.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\toolbar\bottom.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\toolbar\bottom_offset.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\toolbar\buttons.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\toolbar\external.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\toolbar\external_inline.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\toolbar\inline.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\toolbar\inline_selection.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\toolbar\offset.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\toolbar\show_selection.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\toolbar\sticky.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\typing\keep_format.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\typing\shortcuts.html" />
+    <Content Include="Assets\froala_editor_2.9.1\html\typing\tab.html" />
+    <Content Include="Assets\froala_editor_2.9.1\img\photo1.jpg" />
+    <Content Include="Assets\froala_editor_2.9.1\index.html" />
+    <Content Include="Assets\froala_editor_2.9.1\js\froala_editor.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\froala_editor.pkgd.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\ar.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\bs.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\cs.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\da.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\de.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\el.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\en_ca.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\en_gb.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\es.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\et.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\fa.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\fi.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\fr.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\he.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\hr.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\hu.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\id.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\it.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\ja.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\ko.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\ku.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\me.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\nb.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\nl.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\pl.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\pt_br.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\pt_pt.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\ro.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\ru.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\sk.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\sr.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\sv.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\th.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\tr.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\uk.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\vi.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\zh_cn.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\languages\zh_tw.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\align.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\char_counter.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\code_beautifier.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\code_view.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\colors.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\draggable.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\emoticons.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\entities.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\file.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\font_family.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\font_size.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\forms.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\fullscreen.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\help.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\image.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\image_manager.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\inline_class.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\inline_style.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\line_breaker.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\line_height.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\link.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\lists.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\paragraph_format.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\paragraph_style.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\print.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\quick_insert.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\quote.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\save.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\special_characters.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\table.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\url.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\video.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\plugins\word_paste.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\third_party\embedly.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\third_party\font_awesome.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\third_party\image_aviary.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\third_party\image_tui.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\js\third_party\spell_checker.min.js" />
+    <Content Include="Assets\froala_editor_2.9.1\License.txt" />
     <Content Include="Assets\guidely.html" />
     <Content Include="Assets\icons.html" />
     <Content Include="Assets\img\body-bg.png" />
@@ -722,10 +983,18 @@
     <Content Include="Content\AjaxControlToolkit\Styles\Twitter.min.css" />
     <Content Include="Content\AjaxControlToolkit\Styles\ValidatorCallout.css" />
     <Content Include="Content\AjaxControlToolkit\Styles\ValidatorCallout.min.css" />
+    <Content Include="Content\es_es.js" />
+    <Content Include="Content\froala_editor.css" />
+    <Content Include="Content\froala_editor.min.js" />
+    <Content Include="Content\img\preloader.gif" />
+    <Content Include="Content\jquery-1.10.2.min.js" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Noticias.aspx" />
+    <Content Include="NoticiasNew.aspx" />
+    <Content Include="Noticias\Imagenes\index.html" />
+    <Content Include="Noticias\index.html" />
     <Content Include="Perfiles.aspx" />
     <Content Include="Permisos.aspx" />
     <Content Include="Scripts\AjaxControlToolkit\Debug\Accordion.debug.js" />
@@ -1094,6 +1363,9 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FroalaHandler.ashx.cs">
+      <DependentUpon>FroalaHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1110,6 +1382,13 @@
     </Compile>
     <Compile Include="Noticias.aspx.designer.cs">
       <DependentUpon>Noticias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NoticiasNew.aspx.cs">
+      <DependentUpon>NoticiasNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoticiasNew.aspx.designer.cs">
+      <DependentUpon>NoticiasNew.aspx</DependentUpon>
     </Compile>
     <Compile Include="Perfiles.aspx.cs">
       <DependentUpon>Perfiles.aspx</DependentUpon>
@@ -1159,6 +1438,10 @@
     <Content Include="Assets\datatables\extensions\TableTools\images\psd\file_types.psd" />
     <Content Include="Assets\datatables\extensions\TableTools\images\psd\printer.psd" />
     <Content Include="Assets\datatables\extensions\TableTools\Readme.md" />
+    <Content Include="Assets\froala_editor_2.9.1\bower.json" />
+    <Content Include="Assets\froala_editor_2.9.1\composer.json" />
+    <Content Include="Assets\froala_editor_2.9.1\package.json" />
+    <Content Include="FroalaHandler.ashx" />
     <None Include="packages.config" />
     <Content Include="Sitio.Master" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
@@ -1172,6 +1455,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
